@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <h1 class="profile-name">Your Name</h1>
+            <p class="profile-tagline">Developer | Creator | Enthusiast</p>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="about-section">
+            <h2 class="about-title">About Me</h2>
+            <div class="about-text">
+                <!-- Replace this with your own about me text -->
+                <p>Hello! I'm a passionate developer who loves creating innovative solutions and exploring new technologies. I enjoy working on both front-end and back-end projects, with a particular interest in modern web development and user experience design.</p>
+                
+                <p>When I'm not coding, you can find me contributing to open-source projects, learning about emerging tech trends, or sharing my knowledge with the developer community. I believe in continuous learning and always strive to improve my skills.</p>
+                
+                <p>Feel free to reach out if you'd like to collaborate on a project or just have a chat about technology!</p>
+            </div>
+        </div>
+
+        <!-- PIXEL UI FEATURES - Comment/Uncomment sections as needed -->
+        
+        <!-- OPTION 1: Digital Clock with Hover Effects -->
+        <!-- Uncomment this section to add a digital clock -->
+        <!--
+        <div class="digital-clock" id="digitalClock">
+            <div id="timeDisplay">00:00:00 AM</div>
+            <div class="clock-label">DIGITAL TIME</div>
+        </div>
+        -->
+
+        <!-- OPTION 2: Analog Clock -->
+        <!-- Uncomment this section to add an analog clock -->
+        <!--
+        <div class="analog-clock">
+            <div class="clock-face">
+                <div class="clock-numbers">
+                    <div class="clock-number" style="top: 8%; left: 50%;">12</div>
+                    <div class="clock-number" style="top: 25%; right: 8%;">3</div>
+                    <div class="clock-number" style="bottom: 8%; left: 50%;">6</div>
+                    <div class="clock-number" style="top: 25%; left: 8%;">9</div>
+                </div>
+                <div class="clock-hand hour-hand" id="hourHand"></div>
+                <div class="clock-hand minute-hand" id="minuteHand"></div>
+                <div class="clock-hand second-hand" id="secondHand"></div>
+                <div class="clock-center"></div>
+            </div>
+        </div>
+        -->
+
+        <!-- OPTION 3: Contact Forum -->
+        <!-- Uncomment this section to add a contact form -->
+        <!--
+        <div class="contact-forum">
+            <div class="forum-title">► Contact Terminal</div>
+            <form id="contactForm">
+                <input type="email" class="forum-input" placeholder="your.email@domain.com" required>
+                <textarea class="forum-input forum-textarea" placeholder="Type your message here..." required></textarea>
+                <button type="submit" class="forum-button">Send Message</button>
+            </form>
+        </div>
+        -->
+
+        <!-- Profile Links -->
+        <div class="profile-links">
+            <!-- Email Link -->
+            <a href="mailto:your.email@example.com" class="profile-link email-link">
+                <i class="fas fa-envelope profile-icon"></i>
+                <span>Email Me</span>
+            </a>
+
+            <!-- GitHub Link -->
+            <a href="https://github.com/yourusername" target="_blank" class="profile-link github-link">
+                <i class="fab fa-github profile-icon"></i>
+                <span>GitHub</span>
+            </a>
+
+            <!-- Instagram Link -->
+            <a href="https://instagram.com/yourusername" target="_blank" class="profile-link instagram-link">
+                <i class="fab fa-instagram profile-icon"></i>
+                <span>Instagram</span>
+            </a>
+
+            <!-- Discord Username (Non-clickable) -->
+            <a href="https://caffeinecompiler.xyz" target="_blank" class="profile-link instagram-link">
+                <i class="fab fa-discord profile-icon"></i>
+                <span>Discord</span>
+            </a>
+
+            <!-- Gmail Link (Alternative email) -->
+            <a href="mailto:your.gmail@gmail.com" class="profile-link gmail-link">
+                <i class="fas fa-envelope profile-icon"></i>
+                <span>Gmail</span>
+            </a>
+
+            <!-- Placeholder for additional links -->
+            <!-- Uncomment and customize as needed:
+            
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="profile-link linkedin-link">
+                <i class="fab fa-linkedin profile-icon"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://twitter.com/yourusername" target="_blank" class="profile-link twitter-link">
+                <i class="fab fa-twitter profile-icon"></i>
+                <span>Twitter</span>
+            </a>
+
+            <a href="https://youtube.com/@yourusername" target="_blank" class="profile-link youtube-link">
+                <i class="fab fa-youtube profile-icon"></i>
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://yourwebsite.com" target="_blank" class="profile-link website-link">
+                <i class="fas fa-globe profile-icon"></i>
+                <span>Personal Website</span>
+            </a>
+            -->
+        </div>
+    </div>
+
+    <script>
+        // PIXEL UI JAVASCRIPT - Only uncomment the functions you need
+
+        // DIGITAL CLOCK FUNCTION
+        // Uncomment this function if you're using the digital clock
+        /*
+        function updateDigitalClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            hours = hours.toString().padStart(2, '0');
+            
+            const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+            document.getElementById('timeDisplay').textContent = timeString;
+        }
+
+        // Start digital clock if element exists
+        if (document.getElementById('digitalClock')) {
+            updateDigitalClock();
+            setInterval(updateDigitalClock, 1000);
+        }
+        */
+
+        // ANALOG CLOCK FUNCTION
+        // Uncomment this function if you're using the analog clock
+        /*
+        function updateAnalogClock() {
+            const now = new Date();
+            const hours = now.getHours() % 12;
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            
+            const hourAngle = (hours * 30) + (minutes * 0.5);
+            const minuteAngle = minutes * 6;
+            const secondAngle = seconds * 6;
+            
+            const hourHand = document.getElementById('hourHand');
+            const minuteHand = document.getElementById('minuteHand');
+            const secondHand = document.getElementById('secondHand');
+            
+            if (hourHand) hourHand.style.transform = `rotate(${hourAngle}deg)`;
+            if (minuteHand) minuteHand.style.transform = `rotate(${minuteAngle}deg)`;
+            if (secondHand) secondHand.style.transform = `rotate(${secondAngle}deg)`;
+        }
+
+        // Start analog clock if elements exist
+        if (document.getElementById('hourHand')) {
+            updateAnalogClock();
+            setInterval(updateAnalogClock, 1000);
+        }
+        */
+
+        // CONTACT FORM FUNCTION
+        // Uncomment this function if you're using the contact form
+        /*
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Create mailto link with the form data
+            const subject = encodeURIComponent('Message from Profile Website');
+            const body = encodeURIComponent(`From: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Optional: Show success message
+            alert('Opening your email client...');
+            
+            // Reset form
+            this.reset();
+        });
+        */
+    </script>
+</body>
+</html>

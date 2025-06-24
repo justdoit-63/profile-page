@@ -1,0 +1,409 @@
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #77dbff 0%, #b66dff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Main container */
+        .profile-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 4px solid #1da1f2;
+            /* This is the change */
+        }
+
+        .profile-container {
+            transition: transform 0.3s ease;
+            /* other styles */
+        }
+
+        .profile-container:hover {
+            transform: scale(1.03);
+            /* Slight zoom effect */
+        }
+
+
+        .profile-container:hover {
+            border-left: 4px solid #0d8ddb;
+            /* A slightly deeper blue on hover */
+            background: rgba(240, 248, 255, 0.95);
+            /* Optional: subtle background shift */
+            transition: all 0.3s ease;
+            /* Smooth animation */
+        }
+
+
+        /* Profile header */
+        .profile-header {
+            margin-bottom: 30px;
+        }
+
+        .profile-name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .profile-tagline {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        /* Profile links section */
+        .profile-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Individual link styling */
+        .profile-link {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .profile-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        /* Non-clickable text (for Discord username) */
+        .profile-text {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            color: #2c3e50;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Icon styling */
+        .profile-icon {
+            font-size: 1.5em;
+            width: 30px;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        /* Platform-specific colors */
+        .email-link:hover .profile-icon {
+            color: #ea4335;
+        }
+
+        .github-link:hover .profile-icon {
+            color: #333;
+        }
+
+        .instagram-link:hover .profile-icon {
+            color: #e4405f;
+        }
+
+        .discord-text .profile-icon {
+            color: #5865f2;
+        }
+
+        .gmail-link:hover .profile-icon {
+            color: #ea4335;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .profile-container {
+                padding: 30px 20px;
+            }
+
+            .profile-name {
+                font-size: 2em;
+            }
+
+            .profile-tagline {
+                font-size: 1em;
+            }
+
+            .profile-link,
+            .profile-text {
+                padding: 12px 15px;
+            }
+
+            .profile-icon {
+                font-size: 1.3em;
+                margin-right: 12px;
+            }
+        }
+
+        /* Hover effects for better interactivity */
+        .profile-link:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Me Section */
+        .about-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-align: left;
+        }
+
+        .about-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-text {
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        /* PIXEL UI STYLES */
+
+        /* Digital Clock Styles */
+        .digital-clock {
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 2.5em;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            border: 3px solid #333;
+            box-shadow:
+                inset 0 0 10px rgba(0, 255, 0, 0.3),
+                0 0 20px rgba(0, 255, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .digital-clock:hover {
+            color: #ff0080;
+            box-shadow:
+                inset 0 0 15px rgba(255, 0, 128, 0.4),
+                0 0 30px rgba(255, 0, 128, 0.3);
+            transform: scale(1.02);
+        }
+
+        .clock-label {
+            font-size: 0.4em;
+            color: #666;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* Analog Clock Styles */
+        .analog-clock {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+            background: #111;
+            border: 4px solid #333;
+            border-radius: 50%;
+            box-shadow:
+                inset 0 0 20px rgba(0, 255, 0, 0.1),
+                0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .clock-face {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .clock-hand {
+            position: absolute;
+            background: #00ff00;
+            transform-origin: bottom center;
+            border-radius: 2px;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        .hour-hand {
+            width: 4px;
+            height: 60px;
+            left: 50%;
+            top: 20%;
+            margin-left: -2px;
+        }
+
+        .minute-hand {
+            width: 3px;
+            height: 80px;
+            left: 50%;
+            top: 10%;
+            margin-left: -1.5px;
+        }
+
+        .second-hand {
+            width: 1px;
+            height: 85px;
+            left: 50%;
+            top: 7.5%;
+            margin-left: -0.5px;
+            background: #ff0080;
+            box-shadow: 0 0 3px rgba(255, 0, 128, 0.5);
+        }
+
+        .clock-center {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #00ff00;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+
+        .clock-numbers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        .clock-number {
+            position: absolute;
+            font-size: 14px;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Contact Forum Styles */
+        .contact-forum {
+            background: #0a0a0a;
+            border: 3px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .forum-title {
+            color: #00ff00;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .forum-input {
+            width: 100%;
+            background: #111;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 15px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .forum-input:focus {
+            outline: none;
+            border-color: #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        .forum-input::placeholder {
+            color: #666;
+        }
+
+        .forum-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .forum-button {
+            background: #111;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 12px 25px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .forum-button:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+        }
+
+        .forum-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Additional styling for future links */
+        .linkedin-link:hover .profile-icon {
+            color: #0077b5;
+        }
+
+        .twitter-link:hover .profile-icon {
+            color: #1da1f2;
+        }
+
+        .youtube-link:hover .profile-icon {
+            color: #ff0000;
+        }
+
+        .website-link:hover .profile-icon {
+            color: #667eea;
+        }
